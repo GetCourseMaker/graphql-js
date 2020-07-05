@@ -495,6 +495,7 @@ function validateInputFields(
   const fields = objectValues(inputObj.getFields());
 
   if (fields.length === 0) {
+    return null
     context.reportError(
       `Input Object type ${inputObj.name} must define one or more fields.`,
       getAllNodes(inputObj),
